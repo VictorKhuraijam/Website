@@ -52,7 +52,7 @@ function Hero() {
 						offset={-100}
 						spy={true}
 						to="contact"
-						className="text-primary-foreground font-semibold px-6 py-3 bg-secondary rounded-lg cursor-pointer shadow hover:bg-accent transition"
+						className=" font-semibold px-6 py-3 bg-[#ff2a2a] rounded-lg cursor-pointer shadow hover:bg-accent transition"
 					>
 						Contact
 					</ScrollLink>

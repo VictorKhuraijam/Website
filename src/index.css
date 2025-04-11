@@ -91,3 +91,244 @@
 		@apply bg-background text-foreground;
 	}
 } */
+
+
+/* @layer base {
+  :root {
+
+		--header-bg: #020A11;
+	}
+} */
+
+/*
+ @layer base {
+  :root {
+
+		--header-bg: #020A11;
+    --background: hsl(207 63% 6%);
+    --foreground: hsl(0 0% 100%);
+    --card: #101c26;
+    --card-foreground: var(--foreground);
+    --popover: hsl(0 0% 100%);
+    --popover-foreground: hsl(222.2 84% 4.9%);
+    --primary: hsl(175 84% 32%);
+    --primary-foreground: var(--foreground);
+    --ligher-primary: hsl(168, 34%, 56%);
+    --dark-primary: hsl(197, 67%, 18%);
+    --secondary: hsl(0, 100%, 65%);
+    --secondary-foreground: var(--foreground);
+    --muted: hsl(207, 41%, 11%);
+    --muted-foreground: hsl(197, 67%, 18%);
+    --skills-bg: hsl(217, 19%, 27%);
+    --project-bg: hsl(207, 41%, 11%);
+    --accent: hsl(0, 100%, 68%);
+    --accent-foreground: var(--foreground);
+    --light-accent: hsl(17, 100%, 74%);
+    --bright-pink: hsl(324, 91%, 41%);
+    --destructive: hsl(324, 91%, 41%);
+    --destructive-foreground: var(--foreground);
+    --neutral-primary: #d9d9d9;
+    --border: hsl(214.3 31.8% 91.4%);
+    --input: hsl(214.3 31.8% 91.4%);
+    --ring: hsl(222.2 84% 4.9%);
+    --radius: 0.5rem;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --light-gray: #444;
+    --toastify-color-success: hsl(175 84% 32%);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .heading::before {
+    content: "<";
+    margin-right: 0.25rem;
+  }
+
+  .heading::after {
+    content: ">";
+    margin-left: 0.25rem;
+  }
+
+  .contact-shadow {
+    position: relative;
+  }
+
+  .contact-shadow:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-117deg, #ff6b6b 0%, #ffa07a 86%);
+    @apply translate-x-6 translate-y-8 scale-90;
+    @apply sm:translate-x-10 sm:translate-y-10 sm:scale-90;
+    @apply md:translate-x-14 md:translate-y-10 md:scale-90;
+    filter: blur(0px);
+    opacity: var(1);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+  }
+
+  .contact-shadow:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+  }
+
+  .bg-pattern {
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    @apply bg-[60%_center];
+    @apply md:bg-center;
+    z-index: -2;
+  }
+
+  .bg-pattern.bg-hero {
+    @apply left-[calc(50%)] -translate-x-[50%] top-64;
+    @apply md:left-20 md:translate-x-0;
+    @apply md:top-[50%] md:-translate-y-[50%];
+    z-index: -1;
+  }
+
+  .bg-pattern.bg-about {
+    @apply left-0 top-[44px];
+    @apply md:-left-64 md:-top-10;
+  }
+
+  .project-item {
+    position: relative;
+    cursor: pointer;
+    border-radius: 9px;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 1.4rem 1rem;
+    @apply md:px-8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 9px;
+    break-inside: avoid;
+    height: 450px;
+    @apply md:h-[400px];
+    mask-image: radial-gradient(circle, white 100%, black 100%);
+  }
+
+  .project-item img {
+    @apply md:cursor-none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    transition: transform 300ms ease-in-out, filter 300ms ease-in-out;
+  }
+
+  .project-item:before {
+    content: "";
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    background: radial-gradient(
+      circle at center center,
+      white 10%,
+      whitesmoke 11%,
+      whitesmoke 100%
+    );
+  }
+
+  .project-item:after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.9;
+    @apply md:opacity-[0.1];
+    transition: opacity 300ms ease-in-out;
+    background: linear-gradient(
+      180deg,
+      hsla(209, 40%, 11%, 0.6) 10%,
+      hsla(209, 40%, 11%, 1) 60%
+    );
+  }
+
+  .project-item .content-slate {
+    position: relative;
+    opacity: 1;
+    z-index: 999;
+    transition: opacity 300ms ease-in-out 0s, transform 300ms ease-in-out 0s;
+    @apply md:translate-y-[10%] md:opacity-0;
+  }
+
+  .project-item:hover,
+  .project-item:focus {
+    @apply md:cursor-none;
+  }
+
+  .project-item:hover:after,
+  .project-item:focus:after {
+    @apply md:opacity-100;
+  }
+
+  .project-item:hover .content-slate,
+  .project-item:focus .content-slate {
+    transform: none;
+    opacity: 1;
+  }
+
+  .project-item:hover img,
+  .project-item:focus img {
+    @apply md:scale-[1.02] md:blur-[1px];
+  }
+}  */

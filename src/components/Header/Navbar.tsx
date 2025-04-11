@@ -33,7 +33,7 @@ function Navbar() {
             duration={500}
             className="cursor-pointer"
           >
-            <span>VictorKhuraijam</span>
+            <span className='text-white'>VictorKhuraijam</span>
           </ScrollLink>
         </h2>
       </div>

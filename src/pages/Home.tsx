@@ -13,8 +13,8 @@ import {
 function HomePage() {
 	return (
 		<>
-			<div className="bg-black">
-			<header className="bg-header-bg w-full mx-auto px-4 md:px-20 fixed top-0 z-50 ">
+			<div className="bg-[#020A11] text-white">
+			<header className="bg-[#020A11] w-full mx-auto px-4 md:px-20 fixed top-0 z-50 ">
 				<Nav />
 			</header>
 
