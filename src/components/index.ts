@@ -4,7 +4,6 @@ import Nav from './Header/Navbar'
 import About from './About'
 import Hero from './Hero'
 import Projects from './Projects'
-import Qualification from "./Qualifications";
 import Skills from "./Skills";
 
 
@@ -15,6 +14,5 @@ export {
   About,
   Hero,
   Projects,
-  Qualification,
   Skills
 }

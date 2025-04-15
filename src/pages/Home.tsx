@@ -5,7 +5,6 @@ import {
   Nav,
   Hero,
   Projects,
-  Qualification,
   Skills
 } from "../components/index";
 
@@ -23,7 +22,6 @@ function HomePage() {
 				<About />
 				<Skills />
 				<Projects />
-				<Qualification />
 				<Contact />
 			</main>
 
