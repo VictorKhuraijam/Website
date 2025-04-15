@@ -64,7 +64,7 @@ function Projects() {
 											<p
 												data-hover
 												key={index}
-												className="bg-skills-bg px-2 py-1 rounded-xl md:text-sm text-xs"
+												className="bg-[#353f50] px-2 py-1 rounded-xl md:text-sm text-xs"
 											>
 												{item}
 											</p>
