@@ -100,8 +100,8 @@
 	}
 } */
 
-/*
- @layer base {
+
+ /* @layer base {
   :root {
 
 		--header-bg: #020A11;
@@ -331,7 +331,7 @@
   .project-item:focus img {
     @apply md:scale-[1.02] md:blur-[1px];
   }
-}  */
+} */
 
 /* @layer base {
 .project-item.hovered {
