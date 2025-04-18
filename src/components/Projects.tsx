@@ -36,8 +36,8 @@ function Projects() {
 							}
 						>
 							{/* PROJECT IMAGE THUMBNAIL */}
-							<img data-hover src={project.thumbnail} alt={project.title}
-							className="project-img" />
+							<img  src={project.thumbnail} alt={project.title}
+							className="project-img " />
 							<div data-hover >
 								{/* PROJECT TITLE */}
 								<h3
