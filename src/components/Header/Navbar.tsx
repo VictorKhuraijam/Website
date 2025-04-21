@@ -17,9 +17,14 @@ function Navbar() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    isOpen
-      ? lottieRef.current?.playSegments([60, 25], true)
-      : lottieRef.current?.playSegments([25, 60], true)
+    // isOpen
+    //   ? lottieRef.current?.playSegments([60, 25], true)
+    //   : lottieRef.current?.playSegments([25, 60], true)
+    if (isOpen) {
+      lottieRef.current?.playSegments([60, 25], true);
+    } else {
+      lottieRef.current?.playSegments([25, 60], true);
+    }
   };
 
   return (
