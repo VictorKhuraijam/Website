@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import Loading from "../Loading";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -9,6 +9,7 @@ const email = "khuraijamvictor@gmail.com";
 
 function Contact() {
 	const [loading, setLoading] = useState(false);
+	const formRef = useRef<HTMLFormElement>(null);
 
 	const onSubmitForm = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
@@ -31,6 +32,9 @@ function Contact() {
 			if (response.data.success) {
 				// console.log("Success", response);
 				toast.success(response.data.message);
+				if (formRef.current) {
+					formRef.current.reset();
+				}
 			} else {
 				// console.log("Error", response);
 				toast.error(response.data.message);
@@ -80,7 +84,7 @@ function Contact() {
 					</div>
 
 					<div className="md:w-3/5 w-full">
-						<form onSubmit={onSubmitForm} className="flex flex-col gap-2">
+						<form ref={formRef}  onSubmit={onSubmitForm} className="flex flex-col gap-2">
 							<input
 								type="hidden"
 								name="subject"
@@ -91,7 +95,7 @@ function Contact() {
 							<input className="contact-input" type="text" name="name" placeholder="Name" required />
 
 
-							<input className="flex h-10 w-full bg-white text-black rounded-md border border-input px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"  type="email" name="email" placeholder="Email" required />
+							<input className="contact-input"  type="email" name="email" placeholder="Email" required />
 
               <textarea
                 className="min-h-[80px] w-full bg-white text-black rounded-md border border-input px-3 py-2 text-sm  placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
@@ -100,8 +104,11 @@ function Contact() {
 								required
 							></textarea>
 
-							<button  type="submit" className="bg-red-500 rounded py-1.5 cursor-pointer">
-								Submit {loading && <Loading />}
+							<button  type="submit" className="bg-red-500 rounded py-1.5 cursor-pointer disabled:opacity-70 flex items-center justify-center"
+                disabled={loading}
+              >
+								<span>Submit</span>
+                {loading && <Loading />}
 							</button>
 						</form>
 					</div>
