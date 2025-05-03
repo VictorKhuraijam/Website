@@ -98,7 +98,7 @@ function Contact() {
 							<input className="contact-input"  type="email" name="email" placeholder="Email" required />
 
               <textarea
-                className="min-h-[80px] w-full bg-white text-black rounded-md border border-input px-3 py-2 text-sm  placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="custom-input-textarea"
 								name="message"
 								placeholder="Message"
 								required
