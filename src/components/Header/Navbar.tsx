@@ -20,6 +20,7 @@ function Navbar() {
     // isOpen
     //   ? lottieRef.current?.playSegments([60, 25], true)
     //   : lottieRef.current?.playSegments([25, 60], true)
+    // This is a ternary expression, but you're not assigning it or returning it — so it's just sitting there, and the linter thinks it might be accidental
     if (isOpen) {
       lottieRef.current?.playSegments([60, 25], true);
     } else {
