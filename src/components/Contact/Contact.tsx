@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 
-const email = "khuraijamvictor@gmail.com";
+// const email = "khuraijamvictor@gmail.com";
 
 function Contact() {
 	const [loading, setLoading] = useState(false);
