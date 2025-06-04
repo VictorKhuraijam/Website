@@ -22,10 +22,7 @@ export const skillsData: SkillType[] = [
 			"Tailwind CSS",
 			"HTML",
 			"CSS",
-			"SASS",
-			"NextJS",
-			"Bootstrap",
-			"Figma",
+
 		],
 	},
 	{
@@ -37,10 +34,6 @@ export const skillsData: SkillType[] = [
 			"NodeJS",
 			"ExpressJS",
 			"MongoDB",
-			"MySQL",
-			"GraphQL",
-			"Python",
-			"Django",
 		],
 	},
 	{
@@ -48,13 +41,9 @@ export const skillsData: SkillType[] = [
 		src: general,
 		alt: "General skills icon",
 		skills: [
-			"Object-Oriented Programming",
+			"Postman",
 			"Git",
 			"GitHub",
-			"Cisco Devices",
-			"Cryptography",
-			"Java",
-			"Network Protocols",
 		],
 	},
 ];
