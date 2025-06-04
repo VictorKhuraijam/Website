@@ -66,13 +66,13 @@ function Contact() {
 						</h3>
 						<p>
 							Feel free to directly contact me via{" "}
-							<a
+							{/* <a
 								className="hover:text-secondary transition-colors"
 								href={`mailto:${email}`}
 							>
 								<u>Email</u>
 							</a>{" "}
-							or{" "}
+							or{" "} */}
 							<Link
 								className="hover:text-secondary transition-colors"
 								to={`https://www.linkedin.com/in/victor-khuraijam-951060286/`}
