@@ -34,6 +34,8 @@ export const skillsData: SkillType[] = [
 			"NodeJS",
 			"ExpressJS",
 			"MongoDB",
+			"Postman",
+			"Appwrite"
 		],
 	},
 	{
@@ -41,7 +43,7 @@ export const skillsData: SkillType[] = [
 		src: general,
 		alt: "General skills icon",
 		skills: [
-			"Postman",
+			"Vercel",
 			"Git",
 			"GitHub",
 		],
