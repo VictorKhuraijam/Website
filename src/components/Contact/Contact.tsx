@@ -66,12 +66,12 @@ function Contact() {
 						</h3>
 						<p>
 							Feel free to directly contact me via{" "}
-							<Link
+							<a
 								className="hover:text-secondary transition-colors"
-								to={`mailto:${email}`}
+								href={`mailto:${email}`}
 							>
 								<u>Email</u>
-							</Link>{" "}
+							</a>{" "}
 							or{" "}
 							<Link
 								className="hover:text-secondary transition-colors"
