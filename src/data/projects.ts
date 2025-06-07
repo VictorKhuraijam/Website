@@ -22,7 +22,7 @@ export const projects: ProjectType[] = [
 		description: "",
 		thumbnail: RoyaleRex,
 		tech: ["MongoDb", "NodeJs", "React", "Express"],
-		github: "",
+		github: "https://github.com/VictorKhuraijam/Pet-Store",
 		link: "https://pet-store-d7dr.vercel.app/",
 		filter: ["All", "Web Development"],
 		type: "Web Development",
