@@ -22,7 +22,7 @@ function About() {
 						/>
 					</h2>
 					<p>
-						I'm an aspiring <span className="font-bold">Full-Stack Developer</span>from Manipur, India, with a strong interest in building modern, responsive websites and applications.  I recently completed a comprehensive <span className="font-bold">Full-Stack MERN</span>(MongoDB, Express, React, Node.js) development course, where I gained hands-on experience in building dynamic web applications .
+						I'm an aspiring <span className="font-bold">Full-Stack Developer</span> from Manipur, India, with a strong interest in building modern, responsive websites and applications.  I recently completed a comprehensive <span className="font-bold">Full-Stack MERN</span>(MongoDB, Express, React, Node.js) development course, where I gained hands-on experience in building dynamic web applications .
 					</p>
 					<br />
 					<p>
